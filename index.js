@@ -5,6 +5,8 @@ import { citiesController } from './controllers/citiesController.js';
 import { dbController } from './controllers/dbController.js';
 import { energy_labelsController } from './controllers/energy_labelsController.js';
 import { favoritesController } from './controllers/favoritesController.js';
+import { reviewsController } from './controllers/reviewsController.js';
+import { estatesController } from './controllers/estatesController.js';
 
 dotenv.config()
 
@@ -18,6 +20,8 @@ app.use(dbController)
 app.use(citiesController)
 app.use(energy_labelsController)
 app.use(favoritesController)
+app.use(reviewsController)
+app.use(estatesController)
 
 app.get("/", (req, res) => {
     res.send('Hello world')
